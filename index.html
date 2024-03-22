@@ -12,10 +12,15 @@
     <div class="diplaying">
 
                 <!------------- Search Container ----------->
-                <form onsubmit="event.preventDefault();" role="search">
+
+                <form  method="POST" id="form" onsubmit="preventDefault();" role="search">
+                    <input type="hidden" name="access_key" value="0957c479-5cf3-4311-8427-c3ea1339c745">
+
                     <label for="search">Search for stuff</label>
-                    <input id="search" type="search" placeholder="Search github userName" autofocus required />
-                    <button type="submit" onclick="fetchData()">Go</button>    
+                    <input name="submit" id="search" type="search" placeholder="Search github userName" autofocus required />
+                    <button type="submit" onclick="fetchData()">Go</button>   
+                    <div id="result" style="display: none;"></div>
+ 
                 </form>
                 
                 <br><br>
